@@ -1,5 +1,8 @@
 {{ define "head" }}
 <meta name="description" content={{ .Site.Params.description }}>
+{{ if .Site.Params.favicon }}
+<meta property="og:image" content="{{ .Site.Params.favicon }}" />
+{{ end }}
 <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/index.css" media="all">
 
 <!-- fontawesome -->

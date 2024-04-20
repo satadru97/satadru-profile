@@ -1,5 +1,8 @@
 {{ define "head" }}
 <meta name="description" content="{{ .Params.description }}">
+{{ if .Params.image }}
+<meta property="og:image" content="{{ .Params.image }}" />
+{{ end }}
 <link rel="stylesheet" href="{{.Site.Params.staticPath}}/css/single.css">
 
 <!-- fontawesome -->
